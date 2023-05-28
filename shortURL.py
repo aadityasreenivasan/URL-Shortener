@@ -1,5 +1,6 @@
 from __future__ import with_statement
 import contextlib
+#exception handling for the URL
 try:
 	from urllib.parse import urlencode
 except ImportError:
@@ -10,7 +11,7 @@ except ImportError:
 	from urllib2 import urlopen
 import sys
 
-#if the code is not working for you, then use the command - python3 filename.py url
+#if the code is not working, then use the command - python3 filename.py url
 
 def make_tiny(url):
 	request_url = ('http://tinyurl.com/api-create.php?' + 
